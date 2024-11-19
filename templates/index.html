@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SAR Image Target Detection</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            text-align: center;
+            padding: 20px;
+        }
+        input[type="file"] {
+            margin: 20px 0;
+        }
+        button {
+            padding: 10px 20px;
+            background-color: #3498db;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        button:hover {
+            background-color: #2980b9;
+        }
+    </style>
+</head>
+<body>
+    <h1>SAR Image Target Detection</h1>
+    <form action="/predict" method="post" enctype="multipart/form-data">
+        <input type="file" name="file" accept="image/*">
+        <br>
+        <button type="submit">Upload and Predict</button>
+    </form>
+</body>
+</html>

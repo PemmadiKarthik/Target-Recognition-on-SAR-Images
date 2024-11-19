@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prediction Result</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            text-align: center;
+            padding: 40px;
+        }
+        img {
+            max-width: 80%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+            margin: 20px auto;
+            display: block;
+        }
+        h1 {
+            font-size: 3em;
+            margin-bottom: 20px;
+        }
+        h2 {
+            font-size: 2.5em;
+            margin-top: 30px;
+            color: #e74c3c; /* Highlighted in red */
+        }
+        p {
+            font-size: 1.8em;
+        }
+        .container {
+            max-width: 80%;
+            margin: auto;
+            text-align: center;
+        }
+        a {
+            display: inline-block;
+            padding: 10px 20px;
+            margin-top: 30px;
+            background-color: #3498db;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 1.5em;
+        }
+        a:hover {
+            background-color: #2980b9;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Prediction Result</h1>
+        <h2>Predicted Class: {{ predicted_class }}</h2>
+        <p>Accuracy: {{ accuracy|round(4) }}</p>
+        <img src="data:image/jpeg;base64,{{ img_data }}" alt="Detected Image">
+        <br><br>
+        <a href="/">Upload another image</a>
+    </div>
+</body>
+</html>
