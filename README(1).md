@@ -1,5 +1,5 @@
-# Target Recognition in Sythentic Aperture Radar Imagery Using Deep Learning
-### By: Nate DiRenzo
+# Target Recognition in Synthetic Aperture Radar Imagery Using CNN
+### By: Karthik Pemmadi
 
 ## Statement of Need:
 
@@ -7,11 +7,9 @@ As the general public strives to stay on top of modern conflicts such as the Rus
 
 Of particular interest for this task is synthetic aperture radar (SAR) imagery. SAR has the ability to penetrate atmospheric conditions, and provide visibility in cloud-covered areas both day and night.
 
-![](images/maxar_sar_image.jpg)
-
 Given the volume of high resolution satellite imagery coming from conflict zones on a 24/7 basis, observers, and most importantly the combatants themselves, should employ methods that allow them to quickly analyze and identify the presence of objects such as land, sea, and air assets, or siginificant changes over time in imagery.
 
-In this project, we will work with the Moving and Stationary Target Acquisition and Recognition (MSTAR) Dataset produced by the United States Defense Adavanced Research Projects Agency (DARPA) and U.S. Air Force Research Laboratory. Using Deep Learning models, we will attempt to correctly identify and classify targets within SAR imagery, and evaluate the efficacy of using such a model in a real-world enviornment using selected metrics from our results.
+In this project, we will work with the Moving and Stationary Target Acquisition and Recognition (MSTAR) Dataset produced by the United States Defense Adavanced Research Projects Agency (DARPA) and U.S. Air Force Research Laboratory. Using Deep Learning models, we will attempt to correctly identify and classify targets within SAR imagery, and evaluate the efficacy of using such a model in a real-world environment using selected metrics from our results.
 
 ## Goal:
 
@@ -19,13 +17,13 @@ The goal of this project is to create a deep learning model that accurately clas
 
 ## Success Metrics:
 
-In practical terms, this model would be used in tandem with a human analyst. Because of that we want to reduce the number of false negatives as much as possible (if the model detects no target, the analyst may not double check, and the information may be missed.). 
+In practical terms, this model would be used in tandem with a human analyst. Because of that, we want to reduce the number of false negatives as much as possible (if the model detects no target, the analyst may not double-check, and the information may be missed.). 
 
 As a secondary success metric, we also want to reduce the number of false positives the model produces, as that would increase the amount of meaningless imagery an analyst would have to check.
 
 ## Data Description:
 
-The MSTAR dataset was prdocued between 1995-1997 in a collaboration between DARPA/Air Force Research Laboratories. It contains roughly 1000 SAR images of 8 different vehicle types:
+The MSTAR dataset was produced between 1995-1997 in a collaboration between DARPA/Air Force Research Laboratories. It contains roughly 1000 SAR images of 8 different vehicle types:
 1. [2S1 Gvozdika](https://en.wikipedia.org/wiki/2S1_Gvozdika)
 2. [BRDM-2](https://en.wikipedia.org/wiki/BRDM-2)
 3. [BTR-60](https://en.wikipedia.org/wiki/BTR-60)
@@ -40,13 +38,10 @@ The MSTAR dataset was prdocued between 1995-1997 in a collaboration between DARP
 ## Tools:
 
 - **Tensorflow/Keras**
-- **Seaborn**
-- **Pandas**
+- **Cv2**
+- **Sklearn**
+- **Matplotlib**
 - **Numpy**
 
 ## Models:
-- **Nueral Network**
-
-## MVP Goal:
-
-Produce a baseline neural network and evaluate the results using a confusion matrix. Use these results to inform subsequent direction of solution path and future iterations.
+- **Convolutional Nueral Network**
